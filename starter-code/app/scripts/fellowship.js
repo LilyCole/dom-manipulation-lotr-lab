@@ -241,19 +241,10 @@
       newHobbitList = document.createElement('ul')
       hobbitsToMove = document.getElementsByClassName("hobbit");
  
- /*     !!! COULDN'T HOBBITS TO MOVE HOME !!!
-      Got the following error from the below line of cdoe:
-      "Uncaught TypeError: Cannot read property 'textContent' of undefined"
-      This happens on the third time through the below for loop. 
-      Pretty confused why this is happening. Maybe I'm getting too tired. 
-      zzzz :-(
-*/
+
       length= hobbitsToMove.length;
-      console.log("length: "+length);
-      for(var i=0; i<length;i++){
-        console.log("hobbitToMove: "+hobbitsToMove[i].textContent);
-//    The below line is the one that throws the error. If you uncomment it, the error appears in console.       
-        //newHobbitList.appendChild(hobbitsToMove[i]);
+      for(var i=length-1; i>=0;i--){
+        newHobbitList.appendChild(hobbitsToMove[i]);
       }
       shire.appendChild(newHobbitList);
 
